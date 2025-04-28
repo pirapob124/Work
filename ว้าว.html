@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ใบงาน / (Work Sheet)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FFB6C1;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            color: white;
+            font-size: 32px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            color: #555;
+        }
+        .form-container input[type="text"], .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #FFB6C1;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #FF89A1;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>ใบงาน / (Work Sheet)</h1>
+</header>
+
+<div class="form-container">
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfew77fg8esVtH5nYcWgNp2c7NwKM3CkdL4Mz6j4Z4KgFhovQ/formResponse" method="POST" id="workSheetForm">
+        <label for="entry_1571802485">วันที่</label>
+        <input type="text" name="entry.1571802485" id="entry_1571802485" required>
+
+        <label for="entry_1293745078">1.1 ชื่องาน</label>
+        <input type="text" name="entry.1293745078" id="entry_1293745078" required>
+
+        <label for="entry_488925747">พื้นที่ / อาคาร</label>
+        <input type="text" name="entry.488925747" id="entry_488925747" required>
+
+        <label for="entry_1055836788">ชั้น</label>
+        <input type="text" name="entry.1055836788" id="entry_1055836788" required>
+
+        <label for="entry_687952192">1.2 ผู้แจ้ง</label>
+        <select name="entry.687952192" id="entry_687952192" required>
+            <option value="Help Desk (23888)">Help Desk (23888)</option>
+            <option value="หน่วยงานอื่น">หน่วยงานอื่น</option>
+        </select>
+
+        <label for="entry_1283854609">เลขที่ใบงาน (Help Desk (23888))</label>
+        <input type="text" name="entry.1283854609" id="entry_1283854609" required>
+
+        <label for="entry_2057000795">ชื่อผู้แจ้ง (SOS)</label>
+        <input type="text" name="entry.2057000795" id="entry_2057000795" required>
+
+        <label for="entry_1571802485">ชื่อ หน่วยงาน:</label>
+        <input type="text" id="entry_1571802485" name="entry.1571802485" required>
+
+        <label for="entry_1293745078">หน่วยงาน:</label>
+        <input type="text" id="entry_1293745078" name="entry.1293745078" required>
+
+        <label for="entry_488925747">เบอร์โทรศัพท์ติดต่อ (หน่วยงาน):</label>
+        <input type="text" id="entry_488925747" name="entry.488925747" required>
+
+        <label for="entry_1055836788">วิทยุ / รหัส (หน่วยงาน):</label>
+        <input type="text" id="entry_1055836788" name="entry.1055836788" required>
+
+        <label for="entry_687952192">ชื่อผู้แจ้ง/ใช้งาน:</label>
+        <input type="text" id="entry_687952192" name="entry.687952192" required>
+
+        <label for="entry_1283854609">เบอร์โทรศัพท์ติดต่อ (ผู้แจ้ง/ใช้งาน):</label>
+        <input type="text" id="entry_1283854609" name="entry.1283854609" required>
+
+        <label for="entry_2057000795">รหัสวิทยุ (ผู้แจ้ง/ใช้งาน):</label>
+        <input type="text" id="entry_2057000795" name="entry.2057000795" required>
+
+        <label for="entry_402947182">เวลาที่รับแจ้ง:</label>
+        <input type="text" id="entry_402947182" name="entry.402947182" required>
+
+        <label for="entry_1900872909">ปัญหา / อาการ ที่รับแจ้ง:</label>
+        <input type="text" id="entry_1900872909" name="entry.1900872909" required>
+
+        <label for="entry_1137776982">ผู้รับแจ้งชื่อ:</label>
+        <input type="text" id="entry_1137776982" name="entry.1137776982" required>
+
+        <label for="entry_1624690248">ตำแหน่ง (ผู้รับแจ้งชื่อ):</label>
+        <input type="text" id="entry_1624690248" name="entry.1624690248" required>
+
+        <label for="entry_1571802485">ลำดับที่</label>
+      <input type="text" name="entry.1571802485" required>
+      
+      <label for="entry_1293745078">ระยะเวลาในการตอบรับการรับบริการ (นาที)</label>
+      <input type="text" name="entry.1293745078" required>
+      
+      <label for="entry_488925747">มาตราฐานเวลา (CLAS A-G)</label>
+      <input type="text" name="entry.488925747" required>
+      
+      <label for="entry_1055836788">ระยะเวลาดำเนินการ (นาที/ชั่วโมง/วัน/เดือน)</label>
+      <input type="text" name="entry.1055836788" required>
+
+      <label for="entry_687952192">ผู้รับจ้าง รับผิดชอบอะไหล่ (ตามภาคผนวก ง.)</label>
+      <select name="entry.687952192">
+        <option value="มีอะไหล่">มีอะไหล่</option>
+        <option value="อะไหล่ไม่มี/ไม่พอ">อะไหล่ไม่มี/ไม่พอ</option>
+      </select>
+      
+      <label for="entry_1283854609">อะไหล่ไม่มี/ไม่พอ (ผู้รับจ้าง)</label>
+      <input type="text" name="entry.1283854609" required>
+      
+      <label for="entry_2057000795">ผู้จ้าง (AOT) รับผิดชอบอะไหล่ (ผู้รับจ้าง เบิกอะไหล่)</label>
+      <select name="entry.2057000795">
+        <option value="มีอะไหล่">มีอะไหล่</option>
+        <option value="อะไหล่ไม่มี/ไม่พอ">อะไหล่ไม่มี/ไม่พอ</option>
+      </select>
+      
+      <label for="entry_402947182">อะไหล่ไม่มี/ไม่พอ (ผู้รับจ้าง เบิกอะไหล่)</label>
+      <input type="text" name="entry.402947182" required>
+      
+      <label for="entry_1900872909">ผู้รับจ้าง ตรวจสอบสภาพอะไหล่</label>
+      <select name="entry.1900872909">
+        <option value="สมบูรณ์พร้อมใช้งาน">สมบูรณ์พร้อมใช้งาน</option>
+        <option value="ชำรุดไม่สมบูรณ์/ไม่พอ">ชำรุดไม่สมบูรณ์/ไม่พอ</option>
+      </select>
+
+      <label for="entry_1137776982">ผู้ตรวจสอบสภาพอะไหล่</label>
+      <input type="text" name="entry.1137776982" required>
+
+      <label for="entry_1571802485" class="block text-sm font-medium text-gray-700">ตำแหน่ง  (ผู้รับจ้าง ตรวจสอบสภาพอะไหล่)</label>
+        <input type="text" id="entry_1571802485" name="entry.1571802485" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+        <label for="entry_1293745078" class="block mt-4 text-sm font-medium text-gray-700">2.4 เจ้าหน้าที่ลงนาม อนุมัติงานซ่อม (AOT)</label>
+        <select id="entry_1293745078" name="entry.1293745078" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <option value="อนุมัติให้ดำเนินงาน">อนุมัติให้ดำเนินงาน</option>
+            <option value="อนุมัติไม่ให้ดำเนิน">อนุมัติไม่ให้ดำเนิน</option>
+        </select>
+
+        <label for="entry_488925747" class="block mt-4 text-sm font-medium text-gray-700">อนุมัติไม่ให้ดำเนิน/เหตุผล</label>
+        <input type="text" id="entry_488925747" name="entry.488925747" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+        <label for="entry_1055836788" class="block mt-4 text-sm font-medium text-gray-700">เจ้าหน้าที่ผู้อนุมัติ</label>
+        <input type="text" id="entry_1055836788" name="entry.1055836788" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+        <label for="entry_687952192" class="block mt-4 text-sm font-medium text-gray-700">ตำแหน่ง  (เจ้าหน้าที่ผู้อนุมัติ)</label>
+        <input type="text" id="entry_687952192" name="entry.687952192" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+        <label for="entry_1283854609" class="block mt-4 text-sm font-medium text-gray-700">วันที่  (อนุมัติงานซ่อม (AOT))</label>
+        <input type="text" id="entry_1283854609" name="entry.1283854609" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+        <label for="entry_2057000795" class="block mt-4 text-sm font-medium text-gray-700">เวลาให้เริ่มดำเนินงาน</label>
+        <input type="text" id="entry_2057000795" name="entry.2057000795" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+
+       <label for="entry.1571802485">รายงานการซ่อมงาน / Work Report ครั้งที่</label>
+       <input type="text" name="entry.1571802485" required>
+
+       <label for="entry.1293745078">Job Number :  (รายงานการซ่อมงาน / Work Report)</label>
+       <input type="text" name="entry.1293745078" required>
+
+       <label for="entry.488925747">วันที่  (รายงานการซ่อมงาน)</label>
+       <input type="text" name="entry.488925747" required>
+
+       <label for="entry.1055836788">ชื่อ  (ผู้รับใบอนุมัติการทำงาน)</label>
+       <input type="text" name="entry.1055836788" required>
+
+       <label for="entry.687952192">ตำแหน่ง  (ผู้รับใบอนุมัติการทำงาน)</label>
+       <input type="text" name="entry.687952192" required>
+
+       <label for="entry_1">เวลาที่รับใบอนุญาตการทำงาน:</label>
+        <input type="text" name="entry.1571802485" id="entry_1" required>
+
+        <label for="entry_2">ต้องถึงหน้างานภายในเวลา:</label>
+        <input type="text" name="entry.1293745078" id="entry_2" required>
+
+        <label for="entry_3">3.2 บุคคลอ้างอิงเวลาถึงหน้างาน:</label>
+        <select name="entry.488925747" id="entry_3" required>
+            <option value="ไม่มีบุคคลอ้างอิง ขออ้างอิงโดย">ไม่มีบุคคลอ้างอิง ขออ้างอิงโดย</option>
+            <option value="โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม">โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม</option>
+            <option value="มีบุคคลอ้างอิงหน้างาน">มีบุคคลอ้างอิงหน้างาน</option>
+        </select>
+
+        <label for="entry_4">โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม:</label>
+        <input type="text" name="entry.1055836788" id="entry_4" required>
+
+        <label for="entry_5">ชื่อ (บุคคลอ้างอิงหน้างาน):</label>
+        <input type="text" name="entry.687952192" id="entry_5" required>
+
+        <label for="entry_6">หน่วยงาน (บุคคลอ้างอิงหน้างาน):</label>
+        <input type="text" name="entry.1283854609" id="entry_6" required>
+
+        <label for="entry_7">หน้าที่ (บุคคลอ้างอิงหน้างาน):</label>
+        <input type="text" name="entry.2057000795" id="entry_7" required>
+
+        <label for="entry_8">หมายเลขโทรศัพท์ติดต่อ (บุคคลอ้างอิงหน้างาน):</label>
+        <input type="text" name="entry.402947182" id="entry_8" required>
+
+        <label for="entry_1571802485">3.3 เวลาการตอบรับการบริการ ถึงหน้างาน</label>
+            <input type="text" name="entry.1571802485" required>
+
+            <label for="entry_1293745078">เวลาการตอบรับการบริการ ถึงหน้างาน (กฎระเบียบ)</label>
+            <select name="entry.1293745078" required>
+                <option value="อยู่ในเวลาที่กำหนด">อยู่ในเวลาที่กำหนด</option>
+                <option value="เกินกว่าเวลาที่กำหนด/สาเหตุ">เกินกว่าเวลาที่กำหนด/สาเหตุ</option>
+            </select>
+
+            <label for="entry_488925747">เกินกว่าเวลาที่กำหนด/สาเหตุ (เวลาถึงหน้างาน)</label>
+            <input type="text" name="entry.488925747" required>
+
+            <label for="entry_1055836788">เริ่มซ่อมเวลา</label>
+            <input type="text" name="entry.1055836788" required>
+
+            <label for="entry_687952192">แก้ไขโดย</label>
+            <input type="text" name="entry.687952192" required>
+
+            <label for="entry_1283468968">สาเหตุ</label>
+            <input type="text" name="entry.1283468968" required>
+
+            <label for="entry_1552296825">จากตู้</label>
+            <input type="text" name="entry.1552296825" required>
+
+            <label for="entry_1624690248">เซอร์กิต</label>
+            <input type="text" name="entry.1624690248" required>
+
+            <label for="entry_1916744364">ลำดับที่ 1 (รายการอะไหล่ที่ใช้)</label>
+            <input type="text" name="entry.1916744364" required>
+
+            <label for="entry_1552296825">ลำดับที่ 2 (รายการอะไหล่ที่ใช้)</label>
+            <input type="text" name="entry.1552296825" required>
+
+            <label for="entry_1488665751">ลำดับที่ 3 (รายการอะไหล่ที่ใช้)</label>
+            <input type="text" name="entry.1488665751" required>
+
+            <label for="entry_1283468968">ลำดับที่ 4 (รายการอะไหล่ที่ใช้)</label>
+            <input type="text" name="entry.1283468968" required>
+
+            <label for="entry_1283854609">รายการอะไหล่ที่ใช้ที่ 1</label>
+            <input type="text" name="entry.1283854609" required>
+
+            <label for="entry_1283854609">รายการอะไหล่ที่ใช้ที่ 2</label>
+            <input type="text" name="entry.1283854609" required>
+
+     <!-- 66. รายการอะไหล่ที่ใช้ที่ 3 -->
+    <label for="entry_1571802485">รายการอะไหล่ที่ใช้ที่ 3</label>
+    <input type="text" name="entry.1571802485" required>
+
+    <!-- 67. รายการอะไหล่ที่ใช้ที่ 4 -->
+    <label for="entry_1293745078">รายการอะไหล่ที่ใช้ที่ 4</label>
+    <input type="text" name="entry.1293745078" required>
+
+    <!-- 68. รายการอะไหล่ที่ใช้ที่ 5 -->
+    <label for="entry_488925747">รายการอะไหล่ที่ใช้ที่ 5</label>
+    <input type="text" name="entry.488925747" required>
+
+    <!-- 69. รายการอะไหล่ที่ใช้ที่ 6 -->
+    <label for="entry_1055836788">รายการอะไหล่ที่ใช้ที่ 6</label>
+    <input type="text" name="entry.1055836788" required>
+
+    <!-- 70. รายการอะไหล่ที่ใช้ที่ 7 -->
+    <label for="entry_687952192">รายการอะไหล่ที่ใช้ที่ 7</label>
+    <input type="text" name="entry.687952192" required>
+
+    <!-- 71. จำนวนอะไหล่ที่ใช้ที่ 1 -->
+    <label for="entry_1283854609">จำนวนอะไหล่ที่ใช้ที่ 1</label>
+    <input type="text" name="entry.1283854609" required>
+
+    <!-- 72. จำนวนอะไหล่ที่ใช้ที่ 2 -->
+    <label for="entry_2057000795">จำนวนอะไหล่ที่ใช้ที่ 2</label>
+    <input type="text" name="entry.2057000795" required>
+
+    <!-- 73. จำนวนอะไหล่ที่ใช้ที่ 3 -->
+    <label for="entry_402947182">จำนวนอะไหล่ที่ใช้ที่ 3</label>
+    <input type="text" name="entry.402947182" required>
+
+    <!-- 74. จำนวนอะไหล่ที่ใช้ที่ 4 -->
+    <label for="entry_1900872909">จำนวนอะไหล่ที่ใช้ที่ 4</label>
+    <input type="text" name="entry.1900872909" required>
+
+    <!-- 75. จำนวนอะไหล่ที่ใช้ที่ 5 -->
+    <label for="entry_1137776982">จำนวนอะไหล่ที่ใช้ที่ 5</label>
+    <input type="text" name="entry.1137776982" required>
+
+    <!-- 76. จำนวนอะไหล่ที่ใช้ที่ 6 -->
+    <label for="entry_1624690248">จำนวนอะไหล่ที่ใช้ที่ 6</label>
+    <input type="text" name="entry.1624690248" required>
+
+    <!-- 77. จำนวนอะไหล่ที่ใช้ที่ 7 -->
+    <label for="entry_1916744364">จำนวนอะไหล่ที่ใช้ที่ 7</label>
+    <input type="text" name="entry.1916744364" required>
+
+    <!-- 78. หมายเหตุ (รายการอะไหล่ที่ใช้) -->
+    <label for="entry_1552296825">หมายเหตุ (รายการอะไหล่ที่ใช้)</label>
+    <input type="text" name="entry.1552296825" required>
+
+    <!-- 79-90. ลำดับที่ และ รายการอะไหล่ที่ชำรุด -->
+    <label for="entry_1488665751">ลำดับที่ 1 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.1488665751" required>
+
+    <label for="entry_1283468968">ลำดับที่ 2 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.1283468968" required>
+
+    <label for="entry_302901403">ลำดับที่ 3 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.302901403" required>
+
+    <label for="entry_587672612">ลำดับที่ 4 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.587672612" required>
+
+    <label for="entry_746583653">ลำดับที่ 5 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.746583653" required>
+
+    <label for="entry_612745062">ลำดับที่ 6 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.612745062" required>
+
+    <label for="entry_139645192">ลำดับที่ 7 (รายการอะไหล่ที่ชำรุด)</label>
+    <input type="text" name="entry.139645192" required>
+
+    <!-- 91-100. รายการอะไหล่ที่ชำรุด -->
+    <label for="entry_740732978">รายการอะไหล่ที่ชำรุดที่ 1</label>
+    <input type="text" name="entry.740732978" required>
+
+    <label for="entry_1950746916">รายการอะไหล่ที่ชำรุดที่ 2</label>
+    <input type="text" name="entry.1950746916" required>
+
+    <label for="entry_370862049">รายการอะไหล่ที่ชำรุดที่ 3</label>
+    <input type="text" name="entry.370862049" required>
+
+    <label for="entry_338526893">รายการอะไหล่ที่ชำรุดที่ 4</label>
+    <input type="text" name="entry.338526893" required>
+
+    <label for="entry_431759204">รายการอะไหล่ที่ชำรุดที่ 5</label>
+    <input type="text" name="entry.431759204" required>
+
+
+        <button type="submit">ส่งข้อมูล</button>
+    </form>
+</div>
+
+<script>
+    // Optional: Automatically submit form after all data is filled out (without confirmation page)
+    document.getElementById("workSheetForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        this.submit();
+    });
+</script>
+
+</body>
+</html>

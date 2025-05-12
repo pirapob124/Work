@@ -12,36 +12,41 @@
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #FFB6C1;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-            color: white;
-            font-size: 32px;
-        }
         .form-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 30px auto;
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .form-container label {
-            font-size: 16px;
-            margin-bottom: 8px;
-            display: block;
+        .form-container h1 {
+            text-align: center;
+            font-size: 20px;
+            color: black;
+            margin-bottom: 40px;
+        }
+        .form-container h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            margin-top: 20px;
             color: #555;
         }
-        .form-container input[type="text"], .form-container select {
-            width: 100%;
-            padding: 10px;
+        .form-container label {
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container select {
+            width: 95%;
+            padding: 8px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            font-size: 16px;
         }
         .form-container button {
             width: 100%;
@@ -57,540 +62,1131 @@
             background-color: #FF89A1;
         }
     </style>
+    <script>
+        function handleSubmit(event) {
+            setTimeout(() => {
+                document.getElementById("worksheet-form").reset();
+                alert("ส่งข้อมูลเรียบร้อยแล้ว!");
+            }, 1000);
+        }
+    </script>
 </head>
 <body>
+    <div class="form-container">
+        <h1>ใบงาน / (Work Sheet)</h1>
+        <form id="worksheet-form"
+              action="https://docs.google.com/forms/d/e/1FAIpQLSfew77fg8esVtH5nYcWgNp2c7NwKM3CkdL4Mz6j4Z4KgFhovQ/formResponse"
+              method="POST"
+              target="hidden_iframe"
+              onsubmit="handleSubmit(event)">
+    
 
-<header>
-    <h1>ใบงาน / (Work Sheet)</h1>
-</header>
 
-<div class="form-container">
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfew77fg8esVtH5nYcWgNp2c7NwKM3CkdL4Mz6j4Z4KgFhovQ/formResponse" method="POST" id="workSheetForm">
-        <label for="entry_1571802485">วันที่</label>
-        <input type="text" name="entry.1571802485" id="entry_1571802485" required>
+  
+<div class="flex justify-center items-center mb-6">
+  <img src="https://i.imgur.com/6joPoa7.png" alt="โลโก้ AOT และ TropicalTech"
+       style="max-height: 150px; height: auto; width: auto; max-width: 100%;">
+</div>
 
-        <label for="entry_1293745078">1.1 ชื่องาน</label>
-        <input type="text" name="entry.1293745078" id="entry_1293745078" required>
+
+   <style>
+    .form-container h1 {
+        text-align: center;
+        font-size: 29px; /* <<< เล็กลงกว่าปกติ */
+        color: black;
+        margin-bottom: 30px;
+        margin-top: 50px;
+    }
+    .form-container h2 {
+        font-size: 23px;
+        margin-bottom: 30px;
+        margin-top: 60px;
+        color: #333;
+    }
+     //.form-container h3 {
+        font-size: 25px;
+        margin-bottom: 30px;
+        margin-top: 60px;
+        color: #333;
+    }
+    .form-container label {
+        color: #555; /* หรือ #666 จะดูจางนุ่มกว่า */
+        font-weight: normal;
+    }
+
+</style> 
+
+    
+        <h1>ใบงาน / (Work Sheet)</h1> <!-- ย้ายมาอยู่ใน form -->
+
+        <h2>ส่วนที่ 1 : สำหรับผู้รับแจ้งงานซ่อม</h2>
+
+        <label for="entry_1571802485"<label style= "margin-bottom: 10px;">วันที่</label>
+        <input type="date" name="entry.1571802485"
+               style="width: 200px; padding: 6px; border: 2px solid #333; margin-bottom: px; background-color: #f9f9f9; color: #000;">
+
+ 
+        <label for="jobNumber" style= "margin-top: 17px;">Job Number :</label>
+        <input type="text" name="entry.970090878" style="width: 28.58%;">
+
+
+        <label for="entry_1293745078" <label style="font-weight: bold; color: #333; margin-bottom: 10px; display: block; font-size: 18.5px; margin-top: 20px;">1.1 ชื่องาน</label>
+        <input type="text" name="entry.1293745078">
 
         <label for="entry_488925747">พื้นที่ / อาคาร</label>
-        <input type="text" name="entry.488925747" id="entry_488925747" required>
+        <input type="text" name="entry.488925747">
 
         <label for="entry_1055836788">ชั้น</label>
-        <input type="text" name="entry.1055836788" id="entry_1055836788" required>
+        <input type="text" name="entry.1055836788">
 
-        <label for="entry_687952192">1.2 ผู้แจ้ง</label>
-        <select name="entry.687952192" id="entry_687952192" required>
-            <option value="Help Desk (23888)">Help Desk (23888)</option>
-            <option value="หน่วยงานอื่น">หน่วยงานอื่น</option>
-        </select>
+ 
+  <label style="font-weight: bold; color: #333; margin-bottom: 10px; display: block; margin-top: 20px; font-size: 18.5px;">   
+    1.2 ผู้แจ้ง
+</label>
 
-        <label for="entry_1283854609">เลขที่ใบงาน (Help Desk (23888))</label>
-        <input type="text" name="entry.1283854609" id="entry_1283854609" required>
+<div style="margin-top: 8px; display: flex; flex-direction: column; gap: 3px; margin-bottom: 10px;">
+    <label style="display: flex; align-items: center; gap: 8px;">
+        <input type="radio" name="entry.687952192" value="Help Desk (23888)" onclick="toggleAgencyFields()">
+        Help Desk (23888)
+    </label>
 
-        <label for="entry_2057000795">ชื่อผู้แจ้ง (SOS)</label>
-        <input type="text" name="entry.2057000795" id="entry_2057000795" required>
+    <label style="display: flex; align-items: center; gap: 8px;">
+        <input type="radio" name="entry.687952192" value="หน่วยงานอื่น" onclick="toggleAgencyFields()">
+        หน่วยงานอื่น
+    </label>
+</div>
 
-        <label for="entry_1571802485">ชื่อ หน่วยงาน:</label>
-        <input type="text" id="entry_1571802485" name="entry.1571802485" required>
+<!-- เฉพาะ Help Desk -->
+<div id="helpDeskFields" style="display: none; margin-bottom: 20px;">
+    <label for="entry_1283854609">เลขที่ใบงาน (Help Desk (23888))</label>
+    <input type="text" name="entry.1283854609" 
+        style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px;">
 
-        <label for="entry_1293745078">หน่วยงาน:</label>
-        <input type="text" id="entry_1293745078" name="entry.1293745078" required>
+    <label for="entry_2057000795">ชื่อผู้แจ้ง (SOS)</label>
+    <input type="text" name="entry.2057000795"
+        style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px;">
+</div>
 
-        <label for="entry_488925747">เบอร์โทรศัพท์ติดต่อ (หน่วยงาน):</label>
-        <input type="text" id="entry_488925747" name="entry.488925747" required>
+<!-- เฉพาะหน่วยงานอื่น -->
+<div id="otherAgencyFields" style="display: none; margin-bottom: 20px;">
+    <label for="entry_402947182">ชื่อ หน่วยงาน:</label>
+    <input type="text" name="entry.402947182"
+        style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px;">
 
-        <label for="entry_1055836788">วิทยุ / รหัส (หน่วยงาน):</label>
-        <input type="text" id="entry_1055836788" name="entry.1055836788" required>
+    <label for="entry_1900872909">หน่วยงาน:</label>
+    <input type="text" name="entry.1900872909"
+        style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px;">
 
-        <label for="entry_687952192">ชื่อผู้แจ้ง/ใช้งาน:</label>
-        <input type="text" id="entry_687952192" name="entry.687952192" required>
+    <label for="entry_1137776982">เบอร์โทรศัพท์ติดต่อ (หน่วยงาน):</label>
+    <input type="text" name="entry.1137776982"
+        style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px;">
 
-        <label for="entry_1283854609">เบอร์โทรศัพท์ติดต่อ (ผู้แจ้ง/ใช้งาน):</label>
-        <input type="text" id="entry_1283854609" name="entry.1283854609" required>
+    <label for="entry_1624690248">วิทยุ / รหัส (หน่วยงาน):</label>
+    <input type="text" name="entry.1624690248"
+        style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px;">
+</div>
 
-        <label for="entry_2057000795">รหัสวิทยุ (ผู้แจ้ง/ใช้งาน):</label>
-        <input type="text" id="entry_2057000795" name="entry.2057000795" required>
+<script>
+function toggleAgencyFields() {
+    const selectedValue = document.querySelector('input[name="entry.687952192"]:checked').value;
+    const helpDesk = document.getElementById("helpDeskFields");
+    const otherAgency = document.getElementById("otherAgencyFields");
 
-        <label for="entry_402947182">เวลาที่รับแจ้ง:</label>
-        <input type="text" id="entry_402947182" name="entry.402947182" required>
+    if (selectedValue === "Help Desk (23888)") {
+        helpDesk.style.display = "block";
+        otherAgency.style.display = "none";
+        // clear otherAgency fields
+        otherAgency.querySelectorAll("input").forEach(input => input.value = "");
+    } else {
+        helpDesk.style.display = "none";
+        otherAgency.style.display = "block";
+        // clear helpDesk fields
+        helpDesk.querySelectorAll("input").forEach(input => input.value = "");
+    }
+}
+</script>
 
-        <label for="entry_1900872909">ปัญหา / อาการ ที่รับแจ้ง:</label>
-        <input type="text" id="entry_1900872909" name="entry.1900872909" required>
 
-        <label for="entry_1137776982">ผู้รับแจ้งชื่อ:</label>
-        <input type="text" id="entry_1137776982" name="entry.1137776982" required>
+        <label for="entry_1916744364" <label style="font-weight: bold; color: #333; margin-bottom: 10px; display: block; font-size: 18.5px; margin-top: 20px;">1.3 ชื่อผู้แจ้ง/ใช้งาน:</label>
+        <input type="text" name="entry.1916744364">
 
-        <label for="entry_1624690248">ตำแหน่ง (ผู้รับแจ้งชื่อ):</label>
-        <input type="text" id="entry_1624690248" name="entry.1624690248" required>
+        <label for="entry_1552296825">เบอร์โทรศัพท์ติดต่อ (ผู้แจ้ง/ใช้งาน):</label>
+        <input type="text" name="entry.1552296825">
 
-        <label for="entry_1571802485">ลำดับที่</label>
-      <input type="text" name="entry.1571802485" required>
+        <label for="entry_1488665751">รหัสวิทยุ (ผู้แจ้ง/ใช้งาน):</label>
+        <input type="text" name="entry.1488665751">
+
+        <label for="entry_1283468968" <label style="font-weight: bold; color: #333; margin-bottom: 10px; display: block; font-size: 18.5px; margin-top: 18px;">1.4 เวลาที่รับแจ้ง:</label>
+        <input type="time" name="entry.1283468968"
+               style="width: 200px; padding: 6px; border: 2px solid #333; margin-bottom: px; background-color: #f9f9f9; color: #000;">
+
+
+     <div>
+  <label for="entry_252710135" style="font-weight: bold; color: #333; font-size: 18.5px; font-family: sans-serif; margin-bottom: 10px; display: block; margin-top: 30px;">
+    2.1 ปัญหา / อาการ ที่รับแจ้ง:
+  </label>
+  <textarea name="entry.252710135" rows="4" placeholder="กรอกปัญหาหรืออาการที่พบ..." style="width: 95%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; font-weight: normal; color: #000; font-family: sans-serif;"></textarea>
+</div>
+
+        <label for="entry_278945756">ผู้รับแจ้งชื่อ:</label>
+        <input type="text" name="entry.278945756">
+
+        <label for="entry_187543343">ตำแหน่ง (ผู้รับแจ้งชื่อ):</label>
+        <input type="text" name="entry.187543343">
+
+  <h1>ใบอนุมัติให้ซ่อมงาน / (Work Permit)</h1>
+    <h2>ส่วนที่ 2 : สำหรับแจ้งให้ดำเนินการ (AOT)</h2>
+      <h3 style="margin-top: 20px; margin-bottom: 10px;">
+             2.2 กำหนดค่าดัชนีชี้วัดการบำรุงรักษาKPI (Key Performere Index)(ตามตาราง ภาคผนวก ค.2)
+     </h3>
+        
+      <label for="entry_968074749">ลำดับที่</label>
+      <input type="text" name="entry.968074749" style="width: 28.58%;">
       
-      <label for="entry_1293745078">ระยะเวลาในการตอบรับการรับบริการ (นาที)</label>
-      <input type="text" name="entry.1293745078" required>
+      <label for="entry_1230167084">ระยะเวลาในการตอบรับการรับบริการ (นาที)</label>
+      <input type="text" name="entry.1230167084" style="width: 28.58%;">
+            
+
       
-      <label for="entry_488925747">มาตราฐานเวลา (CLAS A-G)</label>
-      <input type="text" name="entry.488925747" required>
+      <h3  style="margin-top: 19px; margin-bottom: 10px;">
+           2.3 ระยะเวลาในการดำเนินงาน ( ตามตาราง ภาคผนวก ค.2) 
+   </h3>
+ 
       
-      <label for="entry_1055836788">ระยะเวลาดำเนินการ (นาที/ชั่วโมง/วัน/เดือน)</label>
-      <input type="text" name="entry.1055836788" required>
-
-      <label for="entry_687952192">ผู้รับจ้าง รับผิดชอบอะไหล่ (ตามภาคผนวก ง.)</label>
-      <select name="entry.687952192">
-        <option value="มีอะไหล่">มีอะไหล่</option>
-        <option value="อะไหล่ไม่มี/ไม่พอ">อะไหล่ไม่มี/ไม่พอ</option>
-      </select>
+      <label for="entry_646219963">มาตราฐานเวลา (CLAS A-G)</label>
+      <input type="text" name="entry.646219963" style="width: 28.58%;">
       
-      <label for="entry_1283854609">อะไหล่ไม่มี/ไม่พอ (ผู้รับจ้าง)</label>
-      <input type="text" name="entry.1283854609" required>
-      
-      <label for="entry_2057000795">ผู้จ้าง (AOT) รับผิดชอบอะไหล่ (ผู้รับจ้าง เบิกอะไหล่)</label>
-      <select name="entry.2057000795">
-        <option value="มีอะไหล่">มีอะไหล่</option>
-        <option value="อะไหล่ไม่มี/ไม่พอ">อะไหล่ไม่มี/ไม่พอ</option>
-      </select>
-      
-      <label for="entry_402947182">อะไหล่ไม่มี/ไม่พอ (ผู้รับจ้าง เบิกอะไหล่)</label>
-      <input type="text" name="entry.402947182" required>
-      
-      <label for="entry_1900872909">ผู้รับจ้าง ตรวจสอบสภาพอะไหล่</label>
-      <select name="entry.1900872909">
-        <option value="สมบูรณ์พร้อมใช้งาน">สมบูรณ์พร้อมใช้งาน</option>
-        <option value="ชำรุดไม่สมบูรณ์/ไม่พอ">ชำรุดไม่สมบูรณ์/ไม่พอ</option>
-      </select>
+      <label for="entry_97347151">ระยะเวลาดำเนินการ (นาที/ชั่วโมง/วัน/เดือน)</label>
+      <input type="text" name="entry.97347151" style="width: 28.58%;">
 
-      <label for="entry_1137776982">ผู้ตรวจสอบสภาพอะไหล่</label>
-      <input type="text" name="entry.1137776982" required>
 
-      <label for="entry_1571802485" class="block text-sm font-medium text-gray-700">ตำแหน่ง  (ผู้รับจ้าง ตรวจสอบสภาพอะไหล่)</label>
-        <input type="text" id="entry_1571802485" name="entry.1571802485" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<h3 style="margin-top: 18px; margin-bottom: 10px;">
+            2.4 ผู้รับผิดชอบอะไหล่ (ตามตาราง ภาคผนวก ง.)
+     </h3>
 
-        <label for="entry_1293745078" class="block mt-4 text-sm font-medium text-gray-700">2.4 เจ้าหน้าที่ลงนาม อนุมัติงานซ่อม (AOT)</label>
-        <select id="entry_1293745078" name="entry.1293745078" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-            <option value="อนุมัติให้ดำเนินงาน">อนุมัติให้ดำเนินงาน</option>
-            <option value="อนุมัติไม่ให้ดำเนิน">อนุมัติไม่ให้ดำเนิน</option>
-        </select>
+   
+<!-- ฟิลด์: ผู้รับผิดชอบอะไหล่ -->
+<label>
+  <input type="radio" name="entry.686249712" value="ผู้รับจ้าง รับผิดชอบอะไหล่ (ตามภาคผนวก ง.)"  onclick="toggleContractorDetail()">
+  ผู้รับจ้าง รับผิดชอบอะไหล่ (ตามภาคผนวก ง.)
+</label>
+<label>
+  <input type="radio" name="entry.686249712" value="ผู้จ้าง (AOT) รับผิดชอบอะไหล่ (ผู้รับจ้าง เบิกอะไหล่)" onclick="toggleContractorDetail()">
+  ผู้จ้าง (AOT) รับผิดชอบอะไหล่ (ผู้รับจ้าง เบิกอะไหล่)
+</label>
 
-        <label for="entry_488925747" class="block mt-4 text-sm font-medium text-gray-700">อนุมัติไม่ให้ดำเนิน/เหตุผล</label>
-        <input type="text" id="entry_488925747" name="entry.488925747" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+  <!-- ผู้รับจ้าง รับผิดชอบอะไหล่ -->
+  <label style="display: block; margin-bottom: 8px; margin-top: 15px; color: #555;">
+    ผู้รับจ้าง รับผิดชอบอะไหล่ (ตามภาคผนวก ง.)
+  </label>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1291803516" value="มีอะไหล่" onclick="toggleContractorDetail()">
+    มีอะไหล่
+  </label>
+  <label style="display: flex; align-items: center; gap: 11px;">
+    <input type="radio" name="entry.1291803516" value="อะไหล่ไม่มี/ไม่พอ" onclick="toggleContractorDetail()">
+    อะไหล่ไม่มี/ไม่พอ
+  </label>
 
-        <label for="entry_1055836788" class="block mt-4 text-sm font-medium text-gray-700">เจ้าหน้าที่ผู้อนุมัติ</label>
-        <input type="text" id="entry_1055836788" name="entry.1055836788" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
 
-        <label for="entry_687952192" class="block mt-4 text-sm font-medium text-gray-700">ตำแหน่ง  (เจ้าหน้าที่ผู้อนุมัติ)</label>
-        <input type="text" id="entry_687952192" name="entry.687952192" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<!-- รายละเอียดเพิ่มเติม: แสดงเมื่อเลือก "อะไหล่ไม่มี/ไม่พอ" -->
+<div id="contractorDetail" style="display: none; margin-bottom: 20px;">
+  <label for="entry.1160517195" style="display: block; margin-bottom: 5px; color: #333;">
+    อะไหล่ไม่มี/ไม่พอ (ผู้รับจ้าง)
+  </label>
+  <input type="text" name="entry.1160517195" style="width: 95%; padding: 6px; border: 2px solid #ccc; background-color: #f9f9f9; color: #000;">
+</div>
 
-        <label for="entry_1283854609" class="block mt-4 text-sm font-medium text-gray-700">วันที่  (อนุมัติงานซ่อม (AOT))</label>
-        <input type="text" id="entry_1283854609" name="entry.1283854609" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+<script>
+function toggleContractorDetail() {
+  const selectedValue = document.querySelector('input[name="entry.1291803516"]:checked')?.value;
+  const detailSection = document.getElementById('contractorDetail');
+  if (selectedValue === 'อะไหล่ไม่มี/ไม่พอ') {
+    detailSection.style.display = 'block';
+  } else {
+    detailSection.style.display = 'none';
+    document.querySelector('input[name="entry.1160517195"]').value = ''; // เคลียร์ค่าถ้าไม่ใช่ตัวเลือกนั้น
+  }
+}
+</script>
 
-        <label for="entry_2057000795" class="block mt-4 text-sm font-medium text-gray-700">เวลาให้เริ่มดำเนินงาน</label>
-        <input type="text" id="entry_2057000795" name="entry.2057000795" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
 
-    <label for="entry.1571802485">รายงานการซ่อมงาน / Work Report ครั้งที่</label>
-    <input type="text" name="entry.1571802485" required>
 
-    <label for="entry.1293745078">Job Number :  (รายงานการซ่อมงาน / Work Report)</label>
-    <input type="text" name="entry.1293745078" required>
+<!-- ฟิลด์: สถานะอะไหล่ (ผู้จ้าง AOT) -->
+ 
+  <label style="display: block; margin-bottom: 8px; margin-top: 15px; color: #555;">
+    ผู้จ้าง (AOT) รับผิดชอบอะไหล่ (ผู้รับจ้าง เบิกอะไหล่)
+  </label>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1967567190" value="มีอะไหล่" onclick="toggleAotDetail()">
+    มีอะไหล่
+  </label>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1967567190" value="อะไหล่ไม่มี/ไม่พอ" onclick="toggleAotDetail()" style="margin-bottom: 8px;">
+    อะไหล่ไม่มี/ไม่พอ
+  </label>
+ 
 
-    <label for="entry.488925747">วันที่  (รายงานการซ่อมงาน)</label>
-    <input type="text" name="entry.488925747" required>
+<!-- ฟิลด์: รายละเอียดเพิ่มเติม (ผู้จ้าง AOT) -->
+  <div id="aotDetail" style="display: none; margin-bottom: 20px;  margin-top: 10px;">
+  <label for="entry.1813052852" style="display: block; margin-bottom: 5px; color: #333;">
+    อะไหล่ไม่มี/ไม่พอ (ผู้รับจ้าง เบิกอะไหล่)
+  </label>
+  <input type="text" name="entry.1813052852" style="width: 95%; padding: 6px; border: 2px solid #ccc; background-color: #f9f9f9; color: #000;">
+  </div>
 
-    <label for="entry.1055836788">ชื่อ  (ผู้รับใบอนุมัติการทำงาน)</label>
-    <input type="text" name="entry.1055836788" required>
+<script>
+function toggleAotDetail() {
+  const selectedValue = document.querySelector('input[name="entry.1967567190"]:checked')?.value;
+  const detailSection = document.getElementById('aotDetail');
+  if (selectedValue === 'อะไหล่ไม่มี/ไม่พอ') {
+    detailSection.style.display = 'block';
+  } else {
+    detailSection.style.display = 'none';
+    document.querySelector('input[name="entry.1813052852"]').value = ''; // ล้างค่าถ้าไม่ใช่ตัวเลือกนั้น
+  }
+}
+</script>
 
-    <label for="entry.687952192">ตำแหน่ง  (ผู้รับใบอนุมัติการทำงาน)</label>
-    <input type="text" name="entry.687952192" required>
 
-    <label for="entry_1">เวลาที่รับใบอนุญาตการทำงาน:</label>
-        <input type="text" name="entry.1571802485" id="entry_1" required>
 
-        <label for="entry_2">ต้องถึงหน้างานภายในเวลา:</label>
-        <input type="text" name="entry.1293745078" id="entry_2" required>
 
-        <label for="entry_3">3.2 บุคคลอ้างอิงเวลาถึงหน้างาน:</label>
-        <select name="entry.488925747" id="entry_3" required>
-            <option value="ไม่มีบุคคลอ้างอิง">ไม่มีบุคคลอ้างอิง</option>
-            <option value="ขออ้างอิงโดย">ขออ้างอิงโดย</option>
-            <option value="โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม">โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม</option>
-            <option value="มีบุคคลอ้างอิงหน้างาน">มีบุคคลอ้างอิงหน้างาน</option>
-        </select>
+<!-- ตรวจสอบสภาพอะไหล่ -->
+<label style="font-weight: bold; text-decoration: underline; color: #000; margin-bottom: 10px; display: block; margin-top: 12px;">
+  ผู้รับจ้าง ตรวจสอบสภาพอะไหล่
+</label>
+<div style="margin-top: 0; display: flex; flex-direction: column; gap: 1px; margin-bottom: 10px">
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.339242471" value="สมบูรณ์พร้อมใช้งาน" onclick="toggleConditionField()">
+    สมบูรณ์พร้อมใช้งาน
+  </label>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.339242471" value="ชำรุดไม่สมบูรณ์/ไม่พอ" onclick="toggleConditionField()">
+    ชำรุดไม่สมบูรณ์/ไม่พอ
+  </label>
+</div>
 
-        <label for="entry_4">โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม:</label>
-        <input type="text" name="entry.1055836788" id="entry_4" required>
+<div id="baseInspectorFields" style="display: none; margin-bottom: 20px;">
+  <div id="conditionDetail" style="display: none;">
+    <label for="entry_1905705223">ชำรุดไม่สมบูรณ์/ไม่พอ</label>
+    <input type="text" name="entry.1905705223" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+  </div>
 
-        <label for="entry_5">ชื่อ (บุคคลอ้างอิงหน้างาน):</label>
-        <input type="text" name="entry.687952192" id="entry_5" required>
+  <label for="entry_1828354275">ผู้ตรวจสอบสภาพอะไหล่</label>
+  <input type="text" name="entry.1828354275" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
 
-        <label for="entry_6">หน่วยงาน (บุคคลอ้างอิงหน้างาน):</label>
-        <input type="text" name="entry.1283854609" id="entry_6" required>
+  <label for="entry_911129046">ตำแหน่ง (ผู้รับจ้าง ตรวจสอบสภาพอะไหล่)</label>
+  <input type="text" name="entry.911129046" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+</div>
 
-        <label for="entry_7">หน้าที่ (บุคคลอ้างอิงหน้างาน):</label>
-        <input type="text" name="entry.2057000795" id="entry_7" required>
+<script>
+function toggleResponsibleSection() {
+  const selected = document.querySelector('input[name="entry.686249712"]:checked')?.value;
 
-        <label for="entry_8">หมายเลขโทรศัพท์ติดต่อ (บุคคลอ้างอิงหน้างาน):</label>
-        <input type="text" name="entry.402947182" id="entry_8" required>
+  document.getElementById('contractorSection').style.display = selected === 'contractor' ? 'block' : 'none';
+  document.getElementById('aotSection').style.display = selected === 'aot' ? 'block' : 'none';
 
-        <label for="entry_1571802485">3.3 เวลาการตอบรับการบริการ ถึงหน้างาน</label>
-            <input type="text" name="entry.1571802485" required>
+  // Reset ค่า
+  document.querySelectorAll('input[name="entry.1291803516"]').forEach(el => el.checked = false);
+  document.querySelectorAll('input[name="entry.1967567190"]').forEach(el => el.checked = false);
+  document.querySelector('input[name="entry.1160517195"]').value = '';
+  document.querySelector('input[name="entry.1813052852"]').value = '';
+  document.getElementById('sparePartDetail').style.display = 'none';
+  document.getElementById('aotSparePartDetail').style.display = 'none';
+}
 
-            <label for="entry_1293745078">เวลาการตอบรับการบริการ ถึงหน้างาน (กฎระเบียบ)</label>
-            <select name="entry.1293745078" required>
-                <option value="อยู่ในเวลาที่กำหนด">อยู่ในเวลาที่กำหนด</option>
-                <option value="เกินกว่าเวลาที่กำหนด/สาเหตุ">เกินกว่าเวลาที่กำหนด/สาเหตุ</option>
-            </select>
+function toggleSparePartDetail(type) {
+  if (type === 'contractor') {
+    const value = document.querySelector('input[name="entry.1291803516"]:checked')?.value;
+    document.getElementById('sparePartDetail').style.display = value === 'อะไหล่ไม่มี/ไม่พอ' ? 'block' : 'none';
+    if (value !== 'อะไหล่ไม่มี/ไม่พอ') {
+      document.querySelector('input[name="entry.1160517195"]').value = '';
+    }
+  } else if (type === 'aot') {
+    const value = document.querySelector('input[name="entry.1967567190"]:checked')?.value;
+    document.getElementById('aotSparePartDetail').style.display = value === 'อะไหล่ไม่มี/ไม่พอ' ? 'block' : 'none';
+    if (value !== 'อะไหล่ไม่มี/ไม่พอ') {
+      document.querySelector('input[name="entry.1813052852"]').value = '';
+    }
+  }
+}
 
-            <label for="entry_488925747">เกินกว่าเวลาที่กำหนด/สาเหตุ (เวลาถึงหน้างาน)</label>
-            <input type="text" name="entry.488925747" required>
+function toggleConditionField() {
+  const selectedValue = document.querySelector('input[name="entry.339242471"]:checked')?.value;
+  const baseFields = document.getElementById('baseInspectorFields');
+  const conditionDetail = document.getElementById('conditionDetail');
 
-            <label for="entry_1055836788">เริ่มซ่อมเวลา</label>
-            <input type="text" name="entry.1055836788" required>
+  if (selectedValue) {
+    baseFields.style.display = "block";
+    if (selectedValue === "ชำรุดไม่สมบูรณ์/ไม่พอ") {
+      conditionDetail.style.display = "block";
+    } else {
+      conditionDetail.style.display = "none";
+      conditionDetail.querySelector('input').value = "";
+    }
+  } else {
+    baseFields.style.display = "none";
+    conditionDetail.style.display = "none";
+    baseFields.querySelectorAll('input').forEach(input => input.value = '');
+  }
+}
+</script>
 
-            <label for="entry_687952192">แก้ไขโดย</label>
-            <input type="text" name="entry.687952192" required>
 
-            <label for="entry_1283468968">สาเหตุ</label>
-            <input type="text" name="entry.1283468968" required>
 
-            <label for="entry_1552296825">จากตู้</label>
-            <input type="text" name="entry.1552296825" required>
+       <h3 style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">
+  2.5 เจ้าหน้าที่ลงนาม อนุมัติงานซ่อม (AOT)
+</h3>
 
-            <label for="entry_1624690248">เซอร์กิต</label>
-            <input type="number" name="entry.1624690248" required>
+<div style="margin-top: 0; display: flex; flex-direction: column; gap: 1px; margin-bottom: 10px;">
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1521353571" value="อนุมัติให้ดำเนินงาน" onclick="toggleApprovalFields()">
+    อนุมัติให้ดำเนินงาน
+  </label>
 
-            <label for="entry_1916744364">ลำดับที่ 1 (รายการอะไหล่ที่ใช้)</label>
-            <input type="text" name="entry.1916744364" required>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1521353571" value="อนุมัติไม่ให้ดำเนิน" onclick="toggleApprovalFields()">
+    อนุมัติไม่ให้ดำเนิน
+  </label>
+</div>
 
-            <label for="entry_1552296825">ลำดับที่ 2 (รายการอะไหล่ที่ใช้)</label>
-            <input type="text" name="entry.1552296825" required>
+<!-- ส่วนแสดงเฉพาะเมื่อเลือก "อนุมัติไม่ให้ดำเนิน" -->
+<div id="denialFields" style="display: none; margin-bottom: 10px;">
+  <label for="entry_1677104026">อนุมัติไม่ให้ดำเนิน/เหตุผล</label>
+  <input type="text" name="entry.1677104026"
+    style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+</div>
 
-            <label for="entry_1488665751">ลำดับที่ 3 (รายการอะไหล่ที่ใช้)</label>
-            <input type="text" name="entry.1488665751" required>
+<script>
+function toggleApprovalFields() {
+  const selected = document.querySelector('input[name="entry.1521353571"]:checked').value;
+  const denialFields = document.getElementById('denialFields');
 
-            <label for="entry_1283468968">ลำดับที่ 4 (รายการอะไหล่ที่ใช้)</label>
-            <input type="text" name="entry.1283468968" required>
+  if (selected === "อนุมัติไม่ให้ดำเนิน") {
+    denialFields.style.display = "block";
+  } else {
+    denialFields.style.display = "none";
+    denialFields.querySelectorAll('input').forEach(input => input.value = "");
+  }
+}
+</script>
 
-            <label for="entry_1283854609">รายการอะไหล่ที่ใช้ที่ 1</label>
-            <input type="text" name="entry.1283854609" required>
 
-            <label for="entry_1283854609">รายการอะไหล่ที่ใช้ที่ 2</label>
-            <input type="text" name="entry.1283854609" required>
 
-            <!-- 66. รายการอะไหล่ที่ใช้ที่ 3 -->
-    <label for="entry_1571802485">รายการอะไหล่ที่ใช้ที่ 3</label>
-    <input type="text" name="entry.1571802485" required>
+<label for="entry_648602503" style=" margin-top: 20px; margin-bottom: 5px; font-size: 1.1rem;">
+  เจ้าหน้าที่ผู้อนุมัติ
+</label>
+<input type="text" name="entry.648602503"
+  style="width: 95%;">
 
-    <!-- 67. รายการอะไหล่ที่ใช้ที่ 4 -->
-    <label for="entry_1293745078">รายการอะไหล่ที่ใช้ที่ 4</label>
-    <input type="text" name="entry.1293745078" required>
+<label for="entry_564582119" style="margin-top: 1px; margin-bottom: 5px; font-size: 1.1rem;">
+  ตำแหน่ง (เจ้าหน้าที่ผู้อนุมัติ)
+</label>
+<input type="text" name="entry.564582119"
+  style="width: 95%; ">
 
-    <!-- 68. รายการอะไหล่ที่ใช้ที่ 5 -->
-    <label for="entry_488925747">รายการอะไหล่ที่ใช้ที่ 5</label>
-    <input type="text" name="entry.488925747" required>
+<label for="entry_902272881" style="margin-top: 1px; margin-bottom: 5px; font-size: 1.1rem;">
+  วันที่ (อนุมัติงานซ่อม (AOT))
+</label>
+<input type="date" name="entry.902272881"
+  style="display: block; width: 28.58%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-top: 8px;">
 
-    <!-- 69. รายการอะไหล่ที่ใช้ที่ 6 -->
-    <label for="entry_1055836788">รายการอะไหล่ที่ใช้ที่ 6</label>
-    <input type="text" name="entry.1055836788" required>
+<label for="entry_866296966" style="margin-top: 15px; margin-bottom: 5px; font-size: 1.1rem;">
+  เวลาให้เริ่มดำเนินงาน
+</label>
+<input type="time" name="entry.866296966"
+  style="display: block; width: 28.58%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-top: 8px;">
 
-    <!-- 70. รายการอะไหล่ที่ใช้ที่ 7 -->
-    <label for="entry_687952192">รายการอะไหล่ที่ใช้ที่ 7</label>
-    <input type="text" name="entry.687952192" required>
 
-    <!-- 71. จำนวนอะไหล่ที่ใช้ที่ 1 -->
-    <label for="entry_1283854609">จำนวนอะไหล่ที่ใช้ที่ 1</label>
-    <input type="text" name="entry.1283854609" required>
 
-    <!-- 72. จำนวนอะไหล่ที่ใช้ที่ 2 -->
-    <label for="entry_2057000795">จำนวนอะไหล่ที่ใช้ที่ 2</label>
-    <input type="text" name="entry.2057000795" required>
+       
+   <h1>รายงานการซ่อมงาน / Work Report</h1>
+    <h2>ส่วนที่ 3 : สำหรับผู้ปฏิบัติงาน</h2>
 
-    <!-- 73. จำนวนอะไหล่ที่ใช้ที่ 3 -->
-    <label for="entry_402947182">จำนวนอะไหล่ที่ใช้ที่ 3</label>
-    <input type="text" name="entry.402947182" required>
+       <label for="entry.185864363">รายงานการซ่อมงาน / Work Report ครั้งที่</label>
+       <input type="text" name="entry.185864363" style="width: 28.58%;">
 
-    <!-- 74. จำนวนอะไหล่ที่ใช้ที่ 4 -->
-    <label for="entry_1900872909">จำนวนอะไหล่ที่ใช้ที่ 4</label>
-    <input type="text" name="entry.1900872909" required>
+       <label for="entry.942864825">Job Number :  (รายงานการซ่อมงาน / Work Report)</label>
+       <input type="text" name="entry.942864825" style="width: 28.58%;">
 
-    <!-- 75. จำนวนอะไหล่ที่ใช้ที่ 5 -->
-    <label for="entry_1137776982">จำนวนอะไหล่ที่ใช้ที่ 5</label>
-    <input type="text" name="entry.1137776982" required>
+       <label for="entry.427398045">วันที่  (รายงานการซ่อมงาน)</label>
+       <input type="date" name="entry.427398045"
+              style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; width: 28.58%;">
 
-    <!-- 76. จำนวนอะไหล่ที่ใช้ที่ 6 -->
-    <label for="entry_1624690248">จำนวนอะไหล่ที่ใช้ที่ 6</label>
-    <input type="text" name="entry.1624690248" required>
+       <h3  style="margin-top: 30px; margin-bottom: 10px;">
+          3.1 ผู้รับใบอนุมัติการทำงาน
+   </h3>
 
-    <!-- 77. จำนวนอะไหล่ที่ใช้ที่ 7 -->
-    <label for="entry_1916744364">จำนวนอะไหล่ที่ใช้ที่ 7</label>
-    <input type="text" name="entry.1916744364" required>
+       <label for="entry.1359221222">ชื่อ  (ผู้รับใบอนุมัติการทำงาน)</label>
+       <input type="text" name="entry.1359221222">
+
+       <label for="entry.85482997">ตำแหน่ง  (ผู้รับใบอนุมัติการทำงาน)</label>
+       <input type="text" name="entry.85482997">
+
+       <label for="entry_2093049375" style="font-weight: bold; text-decoration: underline; color: #222; margin-bottom: 10px;">
+                   เวลาที่รับใบอนุญาตการทำงาน:
+       </label>
+       <input type="time" name="entry.2093049375"
+          style="width: 200px; padding: 6px; border: 2px solid #333; margin-bottom: px; background-color: #f9f9f9; color: #000;">
+
+
+       <label for="entry_742721689" style="font-weight: bold; text-decoration: underline; color: #222; margin-top: 10px; display: block; margin-bottom: 10px;">
+                   ต้องถึงหน้างานภายในเวลา:
+       </label>
+       <input type="time" name="entry.742721689"
+           style="width: 200px; padding: 6px; border: 2px solid #333; margin-bottom: 10px; background-color: #f9f9f9; color: #000;">
+
+
+      <!-- 3.2 บุคคลอ้างอิงเวลาถึงหน้างาน -->
+<h3 style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">
+  3.2 บุคคลอ้างอิงเวลาถึงหน้างาน:
+</h3>
+
+<div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 10px;">
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1441753695" value="ไม่มีบุคคลอ้างอิง ขออ้างอิงโดย" onclick="toggleReferenceFields()">
+    ไม่มีบุคคลอ้างอิง ขออ้างอิงโดย
+  </label>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1441753695" value="โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม" onclick="toggleReferenceFields()">
+    โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม
+  </label>
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1441753695" value="มีบุคคลอ้างอิงหน้างาน" onclick="toggleReferenceFields()">
+    มีบุคคลอ้างอิงหน้างาน
+  </label>
+</div>
+
+<!-- โทรศัพท์/ วิทยุแจ้ง -->
+<div id="radioApprovalFields" style="display: none; margin-bottom: 20px;">
+  <label for="entry_1715640707">โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม:</label>
+  <input type="text" name="entry.1715640707"
+         style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+</div>
+
+<!-- มีบุคคลอ้างอิงหน้างาน -->
+<div id="personReferenceFields" style="display: none;">
+  <label for="entry_1992481275">ชื่อ (บุคคลอ้างอิงหน้างาน):</label>
+  <input type="text" name="entry.1992481275"
+         style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+
+  <label for="entry_1264526157">หน่วยงาน (บุคคลอ้างอิงหน้างาน):</label>
+  <input type="text" name="entry.1264526157"
+         style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+
+  <label for="entry_35520202">หน้าที่ (บุคคลอ้างอิงหน้างาน):</label>
+  <input type="text" name="entry.35520202"
+         style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+
+  
+     <label for="entry_939424094">หมายเลขโทรศัพท์ติดต่อ (บุคคลอ้างอิงหน้างาน):</label>
+  <input type="text" name="entry.939424094"
+     style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 20px;">
+  
+</div>
+<script>
+function toggleReferenceFields() {
+  const selected = document.querySelector('input[name="entry.1441753695"]:checked').value;
+
+  document.getElementById("radioApprovalFields").style.display = "none";
+  document.getElementById("personReferenceFields").style.display = "none";
+
+  if (selected === "โทรศัพท์/ วิทยุแจ้ง ผู้อนุมัติงานซ่อม") {
+    document.getElementById("radioApprovalFields").style.display = "block";
+  } else if (selected === "มีบุคคลอ้างอิงหน้างาน") {
+    document.getElementById("personReferenceFields").style.display = "block";
+  }
+}
+</script>
+
+
+        <!-- หัวข้อ -->
+<label for="entry_1448906547" style="font-weight: bold; color: #333; margin-bottom: 10px; display: block; font-size: 18.5px; margin-top: 19px;">
+  3.3 เวลาการตอบรับการบริการ ถึงหน้างาน
+</label>
+
+<!-- ช่องกรอกเวลา -->
+<input type="time" name="entry.1448906547"
+       style="width: 200px; padding: 6px; border: 2px solid #333; margin-bottom: 20px; background-color: #f9f9f9; color: #000;">
+
+
+            <!-- หัวข้อ -->
+<label for="entry_1083014738">เวลาการตอบรับการบริการ ถึงหน้างาน (กฎระเบียบ):</label>
+
+
+<!-- ตัวเลือกแบบ radio -->
+<div style="display: flex; flex-direction: column; gap: 4px; margin-top: 5px; margin-bottom: 10px;">
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1083014738" value="อยู่ในเวลาที่กำหนด" onclick="toggleDelayReason()" >
+    อยู่ในเวลาที่กำหนด
+  </label>
+
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.1083014738" value="เกินกว่าเวลาที่กำหนด/สาเหตุ" onclick="toggleDelayReason()" >
+    เกินกว่าเวลาที่กำหนด/สาเหตุ
+  </label>
+</div>
+
+<!-- ช่องกรอกสาเหตุ -->
+<div id="delayReasonField" style="display: none; margin-bottom: 10px;">
+  <label for="entry_302901403">เกินกว่าเวลาที่กำหนด/สาเหตุ (เวลาถึงหน้างาน)</label>
+  <input type="text" name="entry.302901403"
+         style="width: 95%; border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000;">
+</div>
+
+<!-- สคริปต์ควบคุม -->
+<script>
+function toggleDelayReason() {
+  const selected = document.querySelector('input[name="entry.1083014738"]:checked').value;
+  const reasonField = document.getElementById('delayReasonField');
+
+  if (selected === "เกินกว่าเวลาที่กำหนด/สาเหตุ") {
+    reasonField.style.display = "block";
+  } else {
+    reasonField.style.display = "none";
+    reasonField.querySelector('input').value = ""; // เคลียร์ค่าเมื่อซ่อน
+  }
+}
+</script>
+
+ 
+          <h3 style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">
+                             3.4 รายละเอียดการดำเนินงาน (ให้ถ่ายภาพ พื้นที่หน้างาน,อุปกรณ์ที่ชำรุด ก่อน,ขณะ และหลังการแก้ไข)
+         </h3>
+          
+            <label for="entry_487399058">เริ่มซ่อมเวลา</label>
+            <input type="text" name="entry.487399058" style="width: 28.58%;">
+
+            <label for="entry_1580914788">แก้ไขโดย</label>
+            <input type="text" name="entry.1580914788" >
+
+            <label for="entry_931900605">สาเหตุ</label>
+            <input type="text" name="entry.931900605" >
+
+            <label for="entry_1245493078">จากตู้</label>
+            <input type="text" name="entry.1245493078" >
+
+            <label for="entry_552386168">เซอร์กิต</label>
+            <input type="text" name="entry.552386168" >
+
+         <h3 style="font-weight: bold; margin-top: 20px; margin-bottom: 20px;">
+                            4.1 รายการอะไหล่ที่ใช้
+       </h3>
+
+   <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 8px; width: 15%;">ลำดับ</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">รายการอะไหล่ที่ใช้</th>
+      <th style="border: 1px solid #ccc; padding: 8px; width: 15%;">จำนวนอะไหล่ที่ใช้</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1696357844"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.462522386"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1867578605"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1754685975"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1673903738"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1205981140"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1452001056"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1023683692"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1464146345"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.4123267"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1270463015"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.938668426"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1907418765"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.906949022"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1992441621"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.953720743"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1859588397"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1921015326"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.2133056662"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.66591734"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1743441862"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 
     <!-- 78. หมายเหตุ (รายการอะไหล่ที่ใช้) -->
-    <label for="entry_1552296825">หมายเหตุ (รายการอะไหล่ที่ใช้)</label>
-    <input type="text" name="entry.1552296825" required>
-
-    <!-- 79-90. ลำดับที่ และ รายการอะไหล่ที่ชำรุด -->
-    <label for="entry_1488665751">ลำดับที่ 1 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.1488665751" required>
-
-    <label for="entry_1283468968">ลำดับที่ 2 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.1283468968" required>
-
-    <label for="entry_302901403">ลำดับที่ 3 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.302901403" required>
-
-    <label for="entry_587672612">ลำดับที่ 4 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.587672612" required>
-
-    <label for="entry_746583653">ลำดับที่ 5 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.746583653" required>
-
-    <label for="entry_612745062">ลำดับที่ 6 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.612745062" required>
-
-    <label for="entry_139645192">ลำดับที่ 7 (รายการอะไหล่ที่ชำรุด)</label>
-    <input type="text" name="entry.139645192" required>
-
-    <!-- 91-100. รายการอะไหล่ที่ชำรุด -->
-    <label for="entry_740732978">รายการอะไหล่ที่ชำรุดที่ 1</label>
-    <input type="text" name="entry.740732978" required>
-
-    <label for="entry_1950746916">รายการอะไหล่ที่ชำรุดที่ 2</label>
-    <input type="text" name="entry.1950746916" required>
-
-    <label for="entry_370862049">รายการอะไหล่ที่ชำรุดที่ 3</label>
-    <input type="text" name="entry.370862049" required>
-
-    <label for="entry_338526893">รายการอะไหล่ที่ชำรุดที่ 4</label>
-    <input type="text" name="entry.338526893" required>
-
-    <label for="entry_431759204">รายการอะไหล่ที่ชำรุดที่ 5</label>
-    <input type="text" name="entry.431759204" required>
-
-     <label for="entry_1571802485">รายการอะไหล่ที่ชำรุดที่ 6</label>
-     <input type="text" name="entry.1571802485" required>
-
-            <label for="entry_1293745078">รายการอะไหล่ที่ชำรุดที่ 7</label>
-            <input type="text" id="entry_1293745078" name="entry.1293745078" required>
-
-            <label for="entry_488925747">จำนวนไหล่ที่ชำรุดที่ 1</label>
-            <input type="text" id="entry_488925747" name="entry.488925747" required>
-
-            <label for="entry_1055836788">จำนวนไหล่ที่ชำรุดที่ 2</label>
-            <input type="text" id="entry_1055836788" name="entry.1055836788" required>
-
-            <label for="entry_687952192">จำนวนไหล่ที่ชำรุดที่ 3</label>
-            <input type="text" id="entry_687952192" name="entry.687952192" required>
-
-            <label for="entry_1283854609">จำนวนไหล่ที่ชำรุดที่ 4</label>
-            <input type="text" id="entry_1283854609" name="entry.1283854609" required>
-
-            <label for="entry_2057000795">จำนวนไหล่ที่ชำรุดที่ 5</label>
-            <input type="text" id="entry_2057000795" name="entry.2057000795" required>
-
-            <label for="entry_402947182">จำนวนไหล่ที่ชำรุดที่ 6</label>
-            <input type="text" id="entry_402947182" name="entry.402947182" required>
-
-            <label for="entry_1900872909">จำนวนไหล่ที่ชำรุดที่ 7</label>
-            <input type="text" id="entry_1900872909" name="entry.1900872909" required>
-
-            <label for="entry_1137776982">หมายเหตุ (รายการอะไหล่ที่ชำรุด)</label>
-            <input type="text" id="entry_1137776982" name="entry.1137776982" required>
-
-            <label for="entry_1624690248">มีระยะเวลาในการซ่อม (นาที,ชั่วโมง,วัน,เดือน)</label>
-            <input type="text" id="entry_1624690248" name="entry.1624690248" required>
-
-            <label for="entry_1916744364">จนถึง</label>
-            <input type="text" id="entry_1916744364" name="entry.1916744364" required>
-
-            <label for="entry_1552296825">เสร็จ / หยุดงานเวลา</label>
-            <input type="text" id="entry_1552296825" name="entry.1552296825" required>
-
-            <label for="entry_1488665751">เสร็จ / หยุดงานเวลา (ตามเอกสาร)</label>
-            <select id="entry_1488665751" name="entry.1488665751" required>
-                <option value="เสร็จอยู่ในเวลาที่กำหนด">เสร็จอยู่ในเวลาที่กำหนด</option>
-                <option value="เสร็จเกินกว่าเวลาที่กำหนด/สาเหตุ">เสร็จเกินกว่าเวลาที่กำหนด/สาเหตุ</option>
-                <option value="ยังไม่สำเร็จ / สาเหตุ">ยังไม่สำเร็จ / สาเหตุ</option>
-            </select>
-
-            <label for="entry_1055836788">สาเหตุ (เสร็จเกินกว่าเวลาที่กำหนด)</label>
-            <input type="text" id="entry_1055836788" name="entry.1055836788" required>
-
-            <label for="entry_687952192">สาเหตุ (ยังไม่เสร็จ)</label>
-            <input type="text" id="entry_687952192" name="entry.687952192" required>
-      
-            
-        <label for="entry_107">ทีมช่าง:</label>
-        <input type="text" id="entry_107" name="entry.107" required>
+    <label for="entry_1780140684">หมายเหตุ (รายการอะไหล่ที่ใช้)</label>
+    <input type="text" name="entry.1780140684" > 
     
-    
-        <label for="entry_108">ชื่อ (หัวหน้าช่าง/วิศวกร):</label>
-        <input type="text" id="entry_108" name="entry.108" required>
-   
-    
-        <label for="entry_109">ตำเเหน่ง (หัวหน้าช่าง/วิศวกร):</label>
-        <input type="text" id="entry_109" name="entry.109" required>
-    
-        <label for="entry_110">วันที่ (ระยะเวลาในการซ่อม):</label>
-        <input type="text" id="entry_110" name="entry.110" required>
-    
-        <label for="entry_111">เวลา (ระยะเวลาในการซ่อม):</label>
-        <input type="text" id="entry_111" name="entry.111" required>
-    
-        <label for="entry_112">Job Number (ใบบันทึกงาน / WORK RECORD):</label>
-        <input type="text" id="entry_112" name="entry.112" required>
 
-        <label for="entry_113">5.1.1 วันที่</label>
-        <input type="text" id="entry_113" name="entry.113" required>
+       <h3 style="font-weight: bold; margin-top: 20px; margin-bottom: px;">
+                             รายการอะไหล่ที่ชำรุด
+       </h3>
 
-        <label for="entry_114">5.1.1 เวลาแจ้งงาน</label>
-        <input type="text" id="entry_114" name="entry.114" required>
+<!-- ตารางอะไหล่ที่ชำรุด -->
+<table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; ">
+  <thead>
+    <tr>
+      <th style="border: 1px solid #ccc; padding: 8px; width: 15%;">ลำดับ</th>
+      <th style="border: 1px solid #ccc; padding: 8px;">รายการอะไหล่ที่ชำรุด</th>
+      <th style="border: 1px solid #ccc; padding: 8px; width: 15%;">จำนวนอะไหล่ที่ชำรุด</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.115147184" style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.472667252"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.30922046"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1338659958"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.853915161"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1658109547"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1369202557"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1208555406"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1311203661"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.776132959"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.81946772"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1643499179"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1967433916"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1819912572"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1287736314"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.450808712"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.734416009"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.1906179646"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+    <tr>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.359404037"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.2031530098"  style="display: block; margin: auto; padding: 6px; width: 90%;">
+      </td>
+      <td style="border: 1px solid #ccc; padding: 8px; text-align: center;">
+        <input type="text" name="entry.844443567"  style="display: block; margin: auto; padding: 6px; width: 85%;">
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-        <label for="entry_115">5.1.2 เวลาอนุมัติให้ซ่อมงาน (เริ่มจับเวลา ช่วงที่1) (วันที่)</label>
-        <input type="text" id="entry_115" name="entry.115" required>
-
-        <label for="entry_116">5.1.2 เวลาอนุมัติให้ซ่อมงาน (เริ่มจับเวลา ช่วงที่1)</label>
-        <input type="text" id="entry_116" name="entry.116" required>
-
-        <label for="entry_117">5.1.3 เวลาตอบรับการบริการ (ถีงหน้างาน) (วันที่)</label>
-        <input type="text" id="entry_117" name="entry.117" required>
-
-        <label for="entry_118">5.1.3 เวลาตอบรับการบริการ (ถีงหน้างาน)</label>
-        <input type="text" id="entry_118" name="entry.118" required>
-
-        <label for="entry_119">5.1.4 ให้เริ่มดำเนินการซ่อมเมื่อ (วันที่)</label>
-        <input type="text" id="entry_119" name="entry.119" required>
-
-        <label for="entry_120">5.1.4 ให้เริ่มดำเนินการซ่อมเมื่อ (เวลา)</label>
-        <input type="text" id="entry_120" name="entry.120" required>
-
-                <label for="entry_1571802485">5.1.5 ดำเนินการเสร็จเมื่อ (วันที่)</label>
-                <input type="text" name="entry.1571802485" required>
-            
-                <label for="entry_1293745078">5.1.5 ดำเนินการเสร็จเมื่อ (เวลา)</label>
-                <input type="text" name="entry.1293745078" required>
-            
-                <label for="entry_488925747">5.1.6 แจ้งปิดงานแล้วผู้ใช้ยืนยันงานเสร็จแล้ว (วันที่)</label>
-                <input type="text" name="entry.488925747" required>
-            
-                <label for="entry_1055836788">5.1.6 แจ้งปิดงานแล้วผู้ใช้ยืนยันงานเสร็จแล้ว (เวลา)</label>
-                <input type="text" name="entry.1055836788" required>
-            
-                <label for="entry_687952192">ระยะเวลาตอบรับการบริการ</label>
-                <input type="text" name="entry.687952192" required>
-            
-                <label for="entry_1283854609">มาตรฐานเวลา</label>
-                <input type="text" name="entry.1283854609" required>
-            
-                <label for="entry_2057000795">5.2.1 ใช้เวลาในการดำเนินการในส่วนที่ 1</label>
-                <select name="entry.2057000795">
-                    <option value="อยู่ภายใน ระยะเวลาตอบรับการบริการ">อยู่ภายใน ระยะเวลาตอบรับการบริการ</option>
-                    <option value="เกินกว่า ระยะเวลาตอบรับการบริการ">เกินกว่า ระยะเวลาตอบรับการบริการ</option>
-                </select>
-            
-                <label for="entry_1283468968">เกินกว่า ระยะเวลาตอบรับการบริการ (สาเหตุ)</label>
-                <input type="text" name="entry.1283468968" required>
-            
-                <label for="entry_252710135">ระยะเวลาการซ่อมแซมแก้ไข (นาที/ชั่วโมง/วัน/เดือน)</label>
-                <input type="text" name="entry.252710135" required>
-            
-                <label for="entry_278945756">ค่ามาตรฐานระยะเวลาในการดำเนินการทั้งหมด (นาที/ชั่วโมง/วัน/เดือน)</label>
-                <input type="text" name="entry.278945756" required>
-            
-                <label for="entry_187543343">5.2.2 ใช้เวลาในการดำเนินการในส่วนที่ 2</label>
-                <select name="entry.187543343">
-                    <option value="อยู่ภายใน ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2">อยู่ภายใน ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2</option>
-                    <option value="เกินกว่า ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2">เกินกว่า ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2</option>
-                </select>
-            
-                <label for="entry_252710135">เกินกว่า ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2 (สาเหตุ)</label>
-                <input type="text" name="entry.252710135" required>
-            
-                <label for="entry_1900872909">ผ่าน เนื่องจากสาเหตุ</label>
-                <input type="text" name="entry.1900872909" required>
-            
-                <label for="entry_1137776982">ไม่ผ่าน เนื่องจากสาเหตุ</label>
-                <input type="text" name="entry.1137776982" required>
-            
-                <label for="entry_1624690248">เจ้าหน้าที่ผู้ให้อนุมัติ</label>
-                <input type="text" name="entry.1624690248" required>
-            
-                <label for="entry_1916744364">ตำแหน่ง เจ้าหน้าที่ผู้ให้อนุมัติ</label>
-                <input type="text" name="entry.1916744364" required>
-            
-                <label for="entry_1552296825">ประเมินสรุป ผลการการทำงาน (วันที่)</label>
-                <input type="text" name="entry.1552296825" required>
            
-                <label for="entry_1488665751">ประเมินสรุป ผลการการทำงาน (เวลา)</label>
-                <input type="text" name="entry.1488665751" required>
 
-                <div class="form-group">
+            <label for="entry_1813859701">หมายเหตุ (รายการอะไหล่ที่ชำรุด)</label>
+            <input type="text"name="entry.1813859701" >
+
+            <label for="entry_216716522"<label style="font-weight: bold; color: #333; margin-bottom: 10px; display: block; font-size: 18.5px; margin-top: 18px;">4.2 มีระยะเวลาในการซ่อม (นาที,ชั่วโมง,วัน,เดือน)</label>
+            <input type="text" name="entry.216716522" style="width: 28.58%;">
+
+            <label for="entry_1958706017">จนถึง</label>
+            <input type="time" name="entry.1958706017" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; width: 28.58%; margin-bottom: 10px;" >
+
+
+            <label for="entry_1207123235">เสร็จ / หยุดงานเวลา</label>
+            <input type="time" name="entry.1207123235" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; width: 28.58%; margin-bottom: 15px;" >
+
+
+     <label >เสร็จ / หยุดงานเวลา (ตามเอกสาร)</label>
+<!-- ตัวเลือกแบบ radio -->
+<div style="display: flex; flex-direction: column; gap: 3px; margin-top: 5px; margin-bottom: 10px;">
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.180113819" value="เสร็จอยู่ในเวลาที่กำหนด" onclick="toggleReasonFields()" >
+    เสร็จอยู่ในเวลาที่กำหนด
+  </label>
+
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.180113819" value="เสร็จเกินกว่าเวลาที่กำหนด" onclick="toggleReasonFields()" >
+    เสร็จเกินกว่าเวลาที่กำหนด
+  </label>
+
+  <label style="display: flex; align-items: center; gap: 8px;">
+    <input type="radio" name="entry.180113819" value="ยังไม่สำเร็จ" onclick="toggleReasonFields()" >
+    ยังไม่สำเร็จ
+  </label>
+</div>
+
+<!-- สาเหตุ (เสร็จเกินกว่าเวลาที่กำหนด) -->
+<div id="reason-late" style="margin-top: 12px; display: none;">
+  <label for="entry_293326529">สาเหตุ (เสร็จเกินกว่าเวลาที่กำหนด)</label>
+  <input type="text" name="entry.293326529" style="width: 95%; padding: 6px; border: 2px solid #333; background-color: #f9f9f9; color: #000; margin-bottom: 40px;">
+</div>
+
+<!-- สาเหตุ (ยังไม่เสร็จ) -->
+<div id="reason-incomplete" style="margin-top: 12px; display: none;">
+  <label for="entry_1043496478">สาเหตุ (ยังไม่เสร็จ)</label>
+  <input type="text" name="entry.1043496478" style="width: 95%; padding: 6px; border: 2px solid #333; background-color: #f9f9f9; color: #000; margin-bottom: 40px;">
+</div>
+
+<script>
+  function toggleReasonFields() {
+    const selected = document.querySelector('input[name="entry.180113819"]:checked').value;
+
+    // แสดงหรือซ่อนช่องกรอกเหตุผลตามการเลือก
+    document.getElementById("reason-late").style.display = selected === "เสร็จเกินกว่าเวลาที่กำหนด" ? "block" : "none";
+    document.getElementById("reason-incomplete").style.display = selected === "ยังไม่สำเร็จ" ? "block" : "none";
+
+    // เคลียร์ค่ากรอกเมื่อซ่อนช่อง
+    if (selected !== "เสร็จเกินกว่าเวลาที่กำหนด") {
+      document.getElementById("entry_180113819").value = "";
+    }
+    if (selected !== "ยังไม่สำเร็จ") {
+      document.getElementById("entry_180113819").value = "";
+    }
+  }
+</script>
+
+        
+            
+        <label for="entry_2022646540">ทีมช่าง:</label>
+        <input type="text" name="entry.2022646540" >
+   
+        <label for="entry_1744362841">ชื่อ (หัวหน้าช่าง/วิศวกร):</label>
+        <input type="text" name="entry.1744362841" >
+   
+        <label for="entry_213309204">ตำเเหน่ง (หัวหน้าช่าง/วิศวกร):</label>
+        <input type="text" name="entry.213309204" >
+   
+        <label for="entry_803282683">วันที่ (ระยะเวลาในการซ่อม):</label>
+        <input type="date" name="entry.803282683" 
+               style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+    
+        <label for="entry_96484564">เวลา (ระยะเวลาในการซ่อม):</label>
+        <input type="time" name="entry.96484564" 
+               style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; width: 28.58%;">
+
+    <h1>ใบบันทึกงาน / WORK RECORD</h1>
+     <h2>ส่วนที่ 4 : สำหรับเจ้าหน้าที่บันทึกหยุดจับเวลา (AOT)กรณีงานซ่อมเสร็จเรียบร้อยแล้วเท่าน้ัน</h2>
+
+        <label for="entry_56857158">Job Number (ใบบันทึกงาน / WORK RECORD):</label>
+        <input type="text" name="entry.56857158" style="width: 28.58%;">
+
+         <label for="entry_1374516108">5.1.1 วันที่</label>
+        <input type="date" name="entry.1374516108" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_1406116029">5.1.1 เวลาแจ้งงาน</label>
+        <input type="time" name="entry.1406116029" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_610576904">5.1.2 เวลาอนุมัติให้ซ่อมงาน (เริ่มจับเวลา ช่วงที่1) (วันที่)</label>
+        <input type="date" name="entry.610576904" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_779450779">5.1.2 เวลาอนุมัติให้ซ่อมงาน (เริ่มจับเวลา ช่วงที่1)</label>
+        <input type="time" name="entry.779450779" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_1131627025">5.1.3 เวลาตอบรับการบริการ (ถีงหน้างาน) (วันที่)</label>
+        <input type="date" name="entry.1131627025" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_145665491">5.1.3 เวลาตอบรับการบริการ (ถีงหน้างาน)</label>
+        <input type="time" name="entry.145665491" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_1156592993">5.1.4 ให้เริ่มดำเนินการซ่อมเมื่อ (วันที่)</label>
+        <input type="date" name="entry.1156592993" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        <label for="entry_1733286785">5.1.4 ให้เริ่มดำเนินการซ่อมเมื่อ (เวลา)</label>
+        <input type="time" name="entry.1733286785" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">>
+ 
+        
+                <label for="entry_268507003">5.1.5 ดำเนินการเสร็จเมื่อ (วันที่)</label>
+                <input type="date" name="entry.268507003" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+            
+                <label for="entry_1938382394">5.1.5 ดำเนินการเสร็จเมื่อ (เวลา)</label>
+                <input type="time" name="entry.1938382394" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+            
+                <label for="entry_1879585130">5.1.6 แจ้งปิดงานแล้วผู้ใช้ยืนยันงานเสร็จแล้ว (วันที่)</label>
+                <input type="date" name="entry.1879585130" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+            
+                <label for="entry_1225351138">5.1.6 แจ้งปิดงานแล้วผู้ใช้ยืนยันงานเสร็จแล้ว (เวลา)</label>
+                <input type="time" name="entry.1225351138" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+            
+           <h3 style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">
+                           5.2.1 ใช้เวลาในการดำเนินการในส่วนที่ 1
+       </h3>
+                
+                <label for="entry_405431355">ระยะเวลาตอบรับการบริการ</label>
+                <input type="text" name="entry.405431355" style="width: 28.58%;">
+            
+                <label for="entry_888175483">มาตรฐานเวลา</label>
+                <input type="text" name="entry.888175483" style="width: 28.58%;">
+
+           
+                <label for="entry_1483335583" style="margin-top: px; margin-bottom: 10px;">5.2.1 ใช้เวลาในการดำเนินการในส่วนที่ 1</label>
+
+<div>
+  <label>
+    <input type="radio" name="entry.1483335583" value="อยู่ภายใน ระยะเวลาตอบรับการบริการ" onclick="toggleCauseField()">
+    อยู่ภายใน ระยะเวลาตอบรับการบริการ
+  </label>
+</div>
+
+<div>
+  <label>
+    <input type="radio" name="entry.1483335583" value="เกินกว่า ระยะเวลาตอบรับการบริการ" onclick="toggleCauseField()" >
+    เกินกว่า ระยะเวลาตอบรับการบริการ
+  </label>
+</div>
+
+<!-- หัวข้อคำถาม "เกินกว่า ระยะเวลาตอบรับการบริการ (สาเหตุ)" ที่จะอยู่ด้านล่าง -->
+<div id="causeField" style="display: none; margin-top: 10px; margin-bottom: px;">
+  <label for="entry_322763119">เกินกว่า ระยะเวลาตอบรับการบริการ (สาเหตุ)</label>
+  <input type="text" name="entry.322763119" style="width: 90%; padding: 6px; border: 2px solid #333; background-color: #f9f9f9; color: #000;" >
+</div>
+
+<script>
+  function toggleCauseField() {
+    const selectedValue = document.querySelector('input[name="entry.1483335583"]:checked').value;
+    const causeField = document.getElementById("causeField");
+
+    // ถ้าเลือก "เกินกว่า ระยะเวลาตอบรับการบริการ" ให้แสดงกล่องข้อความ
+    if (selectedValue === "เกินกว่า ระยะเวลาตอบรับการบริการ") {
+      causeField.style.display = "block";
+    } else {
+      causeField.style.display = "none";
+      causeField.querySelector('input').value = ""; // เคลียร์ค่าเมื่อซ่อน
+    }
+  }
+</script>
+
+                <h3 style="font-weight: bold; margin-top: 29px; margin-bottom: 10px;">
+                          5.2.2 ใช้เวลาในการดำเนินการในส่วนที่ 2
+       </h3>
+            
+                <label for="entry_1086302481" style="margin-top: px; margin-bottom: px;">ระยะเวลาการซ่อมแซมแก้ไข (นาที/ชั่วโมง/วัน/เดือน)</label>
+                <input type="text" name="entry.1086302481" style="width: 28.58%;">
+            
+                <label for="entry_285040757">ค่ามาตรฐานระยะเวลาในการดำเนินการทั้งหมด (นาที/ชั่วโมง/วัน/เดือน)</label>
+                <input type="text" name="entry.285040757" style="width: 28.58%;">
+            
+              
+<!-- หัวข้อ -->
+<label style="display: block; margin-bottom: 4px;">5.2.2 ใช้เวลาในการดำเนินการในส่วนที่ 2</label>
+
+<!-- ตัวเลือก -->
+<div style="margin-bottom: 16px;">
+  <label style="display: block; margin-bottom: 8px;">
+    <input type="radio" name="entry.597530595" value="อยู่ภายใน ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2" onclick="toggleReason(false)">
+    อยู่ภายใน ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2
+  </label>
+  <label style="display: block; margin-bottom: 28px;">
+    <input type="radio" name="entry.597530595" value="เกินกว่า ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2" onclick="toggleReason(true)">
+    เกินกว่า ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2
+  </label>
+</div>
+
+<!-- ช่องกรอกสาเหตุ -->
+<div id="reasonContainer" style="display: none; margin-bottom: 26px;">
+  <label for="entry_2246582" style="display: block; margin-bottom: 4px;">เกินกว่า ค่ามาตรฐานระยะเวลาในการดำเนินการตามภาคผนวกค.2 (สาเหตุ)</label>
+  <input type="text" name="entry.2246582"
+    style="width: 95%; padding: 6px; border: 2px solid #333; background-color: #f9f9f9; color: #000; margin-top: 5px;">
+</div>
+
+<script>
+  function toggleReason(show) {
+    const reasonContainer = document.getElementById('reasonContainer');
+    const reasonInput = document.getElementById('entry_597530595');
+    if (show) {
+      reasonContainer.style.display = 'block';
+      reasonInput.required = true;
+    } else {
+      reasonContainer.style.display = 'none';
+      reasonInput.required = false;
+      reasonInput.value = '';
+    }
+  }
+</script>
+
+             <h3 style="font-weight: bold; margin-top: 20px; margin-bottom: 10px;">
+                             6.3 ประเมินสรุป ผลการการทำงาน อนุมัติให้
+       </h3>
+
+
+                <label for="entry_1515705203">ผ่าน เนื่องจากสาเหตุ</label>
+                <input type="text" name="entry.1515705203" >
+           
+                <label for="entry_337321661">ไม่ผ่าน เนื่องจากสาเหตุ</label>
+                <input type="text" name="entry.337321661" >
+            
+                <label for="entry_1212098527">เจ้าหน้าที่ผู้ให้อนุมัติ</label>
+                <input type="text" name="entry.1212098527" >
+            
+                <label for="entry_446826026">ตำแหน่ง เจ้าหน้าที่ผู้ให้อนุมัติ</label>
+                <input type="text" name="entry.446826026" >
+            
+                <label for="entry_2093068692">ประเมินสรุป ผลการการทำงาน (วันที่)</label>
+                <input type="date" name="entry.2093068692" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+            
+                <label for="entry_1369885045">ประเมินสรุป ผลการการทำงาน (เวลา)</label>
+                <input type="time" name="entry.1369885045" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+         <h1>บันทึกข้อมูลใบงานลงในระบบ <br> SAP / SAP DATA RECORD</h1> 
+          <h2>ส่วนที่ 5 : บันทึกข้อมูลการซ่อมลงระบบ SAP</h2>        
+
+
                 <label for="job-number">Job Number : (บันทึกข้อมูลใบงานลงในระบบ SAP / SAP DATA RECORD)</label>
-                <input type="text" name="entry.1571802485" id="job-number" required>
+                <input type="text" name="entry.154939998" style="width: 28.58%;">
             
                 <label for="work-number">เลขที่ใบงาน</label>
-                <input type="text" name="entry.1293745078" id="work-number" required>
+                <input type="text" name="entry.9902410" style="width: 28.58%;">
             
                 <label for="sap-notification">SAP NOTIFICATION NUMBER</label>
-                <input type="text" name="entry.488925747" id="sap-notification" required>
+                <input type="text" name="entry.245106656" id="sap-notification" >
             
                 <label for="sap-order">SAP ORDER NUMBER</label>
-                <input type="text" name="entry.1055836788" id="sap-order" required>
-            
+                <input type="text" name="entry.1784863737" id="sap-order" >
+           
                 <label for="sap-data-creator">ชื่อ ผู้บันทึกข้อมูล SAP</label>
-                <input type="text" name="entry.687952192" id="sap-data-creator" required>
-            
+                <input type="text" name="entry.1508321333" id="sap-data-creator" >
                 <label for="sap-position">ตำแหน่ง ผู้บันทึกข้อมูล SAP</label>
-                <input type="text" name="entry.1283854609" id="sap-position" required>
+                <input type="text" name="entry.133712604" id="sap-position" >
             
                 <label for="sap-record-date">วันที่ บันทึกข้อมูลการซ่อมลงระบบ SAP</label>
-                <input type="text" name="entry.2057000795" id="sap-record-date" required>
+                <input type="date" name="entry.1861560862" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
             
                 <label for="sap-record-time">เวลา บันทึกข้อมูลการซ่อมลงระบบ SAP</label>
-                <input type="text" name="entry.402947182" id="sap-record-time" required>
+                <input type="time" name="entry.410211654" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+       <h2>ส่วนที่ 6 : บันทึกปิดการซ่อมลงระบบ SAP (AOT)</h2>
             
                 <label for="work-closure">ผู้ปิดงานในระบบ SAP  (ผู้อนุมัติให้ซ่อมงาน)</label>
-                <input type="text" name="entry.1900872909" id="work-closure" required>
+                <input type="text" name="entry.368169107">
             
                 <label for="work-closure-officer">เจ้าหน้าที่ผู้ปิดใบงาน SAP</label>
-                <input type="text" name="entry.1137776982" id="work-closure-officer" required>
+                <input type="text" name="entry.1984325440">
             
                 <label for="work-closure-position">ตำแหน่ง เจ้าหน้าที่ผู้ปิดใบงาน SAP</label>
-                <input type="text" name="entry.1624690248" id="work-closure-position" required>
+                <input type="text" name="entry.1243895587">
             
                 <label for="work-closure-date">วันที่ บันทึกปิดการซ่อมลงระบบ SAP (AOT)</label>
-                <input type="text" name="entry.1916744364" id="work-closure-date" required>
+                <input type="date" name="entry.1664381893" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
             
                 <label for="work-closure-time">เวลา บันทึกปิดการซ่อมลงระบบ SAP (AOT)</label>
-                <input type="text" name="entry.1552296825" id="work-closure-time" required>
-            
+                <input type="time" name="entry.1552296825" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+
+        
+    <h1>รับรองใบงาน / WORK SHEET CERTIFY</h1>
+     <h2>ส่วนที่ 7 : รับรองใบงาน</h2>
+       
                 <label for="work-certify">Job Number : (รับรองใบงาน / WORK SHEET CERTIFY)</label>
-                <input type="text" name="entry.1488665751" id="work-certify" required>
+                <input type="text" name="entry.1294312941" style="width: 28.58%;">
             
                 <label for="engineer-name">ลงชื่อ วิศวกร / หัวหน้าช่าง</label>
-                <input type="text" name="entry.1283468968" id="engineer-name" required>
+                <input type="text" name="entry.1460547632" >
             
                 <label for="engineer-date">วันที่ ลงชื่อ วิศวกร / หัวหน้าช่าง</label>
-                <input type="text" name="entry.1967567190" id="engineer-date" required>
+                <input type="date" name="entry.231654831" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
             
                 <label for="project-manager-name">ลงชื่อ ผจก./ผช.ผจก.โครงการ</label>
-                <input type="text" name="entry.1813052852" id="project-manager-name" required>
+                <input type="text" name="entry.1005931851" >
             
                 <label for="project-manager-date">วันที่ ลงชื่อ ผจก./ผช.ผจก.โครงการ</label>
-                <input type="text" name="entry.339242471" id="project-manager-date" required>
-            
+                <input type="date" name="entry.530017591" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+           
                 <label for="approver-name">ลงชื่อ ผู้อนุมัติให้ซ่อมงาน</label>
-                <input type="text" name="entry.1828354275" id="approver-name" required>
-            
+                <input type="text" name="entry.584801555" id="approver-name" >
+           
                 <label for="approver-date">วันที่ ลงชื่อ ผู้อนุมัติให้ซ่อมงาน</label>
-                <input type="text" name="entry.911129046" id="approver-date" required>
-            
+                <input type="date" name="entry.2082768783" style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;">
+           
                 <label for="supervisor-name">ลงชื่อ ผู้ควบคุมงาน/ผช.ผู้ควบคุมงาน</label>
-                <input type="text" name="entry.1521353571" id="supervisor-name" required>
+                <input type="text" name="entry.360945056" id="supervisor-name" >
             
                 <label for="supervisor-date">วันที่ ลงชื่อ ผู้ควบคุมงาน/ผช.ผู้ควบคุมงาน</label>
-                <input type="text" name="entry.1677104026" id="supervisor-date" required>
+                <input type="date" name="entry.1497292618"style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;"> 
+  
+
         
 
-         <button type="submit">ส่งข้อมูล</button>
+        <button type="submit">ส่งข้อมูล</button>
     </form>
 </div>
 

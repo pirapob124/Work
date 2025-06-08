@@ -1125,6 +1125,7 @@ function toggleDelayReason() {
            
                 <label for="sap-data-creator">ชื่อ ผู้บันทึกข้อมูล SAP</label>
                 <input type="text" name="entry_1508321333" id="sap-data-creator" >
+
                 <label for="sap-position">ตำแหน่ง ผู้บันทึกข้อมูล SAP</label>
                 <input type="text" name="entry_133712604" id="sap-position" >
             
@@ -1182,28 +1183,47 @@ function toggleDelayReason() {
                 <label for="supervisor-date">วันที่ ลงชื่อ ผู้ควบคุมงาน/ผช.ผู้ควบคุมงาน</label>
                 <input type="date" name="entry_1497292618"style="border: 2px solid #333; background-color: #f9f9f9; padding: 6px; color: #000; margin-bottom: 13px; width: 28.58%;"> 
   
+
+
 <button type="submit">ส่งข้อมูล</button>
     </form>
   </div>
 
-  <script>
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = document.getElementById('worksheet-form');
-      const formData = new FormData(form);
+  <!-- Popup แจ้งเตือน -->
+<div id="customPopup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:#333; color:white; padding:15px 25px; border-radius:10px; box-shadow:0 0 15px rgba(0,0,0,0.3); z-index:9999; text-align:center;"></div>
 
-      // ส่งข้อมูลไปยัง Google Forms โดยใช้ no-cors เพื่อหลีกเลี่ยงปัญหา
-      fetch(form.action, {
-        method: 'POST',
-        mode: 'no-cors', // สำคัญ
-        body: formData
-      }).then(() => {
-        alert("ส่งข้อมูลเรียบร้อยแล้ว!");
-        form.reset();
-      }).catch(() => {
-        alert("เกิดข้อผิดพลาดในการส่ง กรุณาลองใหม่");
-      });
+<script>
+document.getElementById("uploadForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  
+  const formData = new FormData(this);
+  const fileUploads = document.querySelectorAll('input[type="file"]');
+
+  // แสดงข้อความ "รอสักครู่ 🔁"
+  showCustomPopup("รอสักครู่ 🔁");
+
+  for (let i = 0; i < fileUploads.length; i++) {
+    const file = fileUploads[i].files[0];
+    if (file) {
+      const base64 = await toBase64(file);
+      formData.set(fileUpload_${i + 1}, base64);
     }
-  </script>
+  }
+
+  try {
+    const response = await fetch('https://script.google.com/macros/s/AKfycbwgmTb6yI0sUwQegNlkc0m8h9YSwuTUwsIUJYKQhvvawnaOqdUD3RfiIsspnVfMAKeo/exec', {
+      method: 'POST',
+      body: formData
+    });
+
+    const result = await response.json();
+    showCustomPopup("✅ ขอบคุณสำหรับการกรอกข้อมูล");
+    this.reset(); // รีเซ็ตฟอร์มหลังจากส่งสำเร็จ
+  } catch (error) {
+    showCustomPopup("❌ มีข้อผิดพลาดในการส่งข้อมูล");
+    this.reset(); // รีเซ็ตฟอร์มหลังจากส่งล้มเหลว
+  }
+});
+</script>
 </body>
 </html>
